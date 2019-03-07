@@ -9,3 +9,6 @@ rm -r -f /tmp/rtlmost*
 ~~~
 
 restart enigma2 GUI
+
+
+![rtlmost_sorozatok](https://user-images.githubusercontent.com/6920933/53970360-d02b2180-40fa-11e9-981e-53c759e17248.jpg)

@@ -8,10 +8,12 @@ if [ $status -ne 0 ]; then
 fi
 cp $1/hosts/hostrtlmost.py $2/hosts/
 hosterr=$?
-cp $1/icons/* $2/icons/
+cp $1/icons/logos/rtlmostlogo.png $2/icons/logos/
+logoerr=$?
+cp $1/icons/PlayerSelector/rtlmost*.png $2/icons/PlayerSelector/
 iconerr=$?
-if [ $hosterr -ne 0 ] || [ $iconerr -ne 0 ]; then
-	echo "rtlmost.sh: copy error from source hosterr[$hosterr], logoerr[$iconerr]"
+if [ $hosterr -ne 0 ] || [ $logoerr -ne 0 ] || [ $iconerr -ne 0 ]; then
+	echo "rtlmost.sh: copy error from source hosterr[$hosterr], logoerr[$logoerr, iconerr[$iconerr]"
 fi
 wget --no-check-certificate https://github.com/e2iplayerhosts/rtlmost/archive/master.zip -q -O /tmp/rtlmost.zip
 if [ -s /tmp/rtlmost.zip ] ; then
